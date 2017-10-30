@@ -25,11 +25,17 @@ Sokoban significa "encargado de almacén" en japonés. El objetivo del juego es 
 ## Antecedentes
 
 https://github.com/TZK-/Sokoban
+
 https://github.com/miki151/sokoban
+
 https://github.com/ktyx/sokoban
+
 https://github.com/CrizMobius/Sokoban
+
 https://github.com/zeekay/sokoban
+
 https://github.com/virgilLacondemine/Sokoban
+
 
 # Objetivos
 
@@ -40,7 +46,9 @@ Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban func
 ## Específicos
 
 **1.** Crear una aplicación sencilla de usar y agradable de utilizar por los usuarios.
+
 **2.** Utilizar los conocimientos aprendidos para resolver los problemas propuestos de la mejor manera posible.
+
 **3.** Practicar la escritura y diseño de código para eventualmente masterizarla.
 
 # Requisitos
