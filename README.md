@@ -26,7 +26,7 @@
 
 ## General
 
-<Enmarque el proyecto en un objetivo global>
+<Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban funcional y agradable de usar para cualquiera.>
 
 ## Específicos
 
@@ -34,4 +34,4 @@
 
 # Requisitos
 
-<Indique el lenguaje y los requerimientos esperados de la aplicación. Liste las [librerías de Processing](https://processing.org/reference/libraries/) que se emplearían para su desarrollo.>
+<Se usará el lenguaje de Processing en la IDE Atom.>
