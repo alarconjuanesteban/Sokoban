@@ -20,7 +20,7 @@ Sokoban es un clásico rompecabezas inventado en Japón, normalmente implementad
 
 Sokoban significa "encargado de almacén" en japonés. El objetivo del juego es empujar las cajas (o las bolas) hasta su lugar correcto dentro de un reducido almacén, con el número mínimo de empujes y de pasos. Las cajas se pueden empujar solamente, y no tirar de ellas, y sólo se puede empujar una caja a la vez. Parece fácil, pero los niveles van desde muy fáciles a extremadamente difíciles, y algunos lleva horas e incluso días resolverlos. La simplicidad y la elegancia de las reglas han hecho de Sokoban uno de los juegos de ingenio más populares.
 
-Referencia: https://es.wikipedia.org/wiki/Sokoban, Consultado el 29 de Octubre de 2017
+***Referencia:** https://es.wikipedia.org/wiki/Sokoban, Consultado el 29 de Octubre de 2017
 
 ## Antecedentes
 
@@ -39,9 +39,9 @@ Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban func
 
 ## Específicos
 
-1. Crear una aplicación sencilla de usar y agradable de utilizar por los usuarios.
-2. Utilizar los conocimientos aprendidos para resolver los problemas propuestos de la mejor manera posible.
-3. Practicar la escritura y diseño de código para eventualmente masterizarla.
+**1.** Crear una aplicación sencilla de usar y agradable de utilizar por los usuarios.
+**2.** Utilizar los conocimientos aprendidos para resolver los problemas propuestos de la mejor manera posible.
+**3.** Practicar la escritura y diseño de código para eventualmente masterizarla.
 
 # Requisitos
 
