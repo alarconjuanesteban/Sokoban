@@ -19,12 +19,12 @@ En este proyecto pretendemos profundizar en loo conceptos de la programación or
 <Sustento teórico del proyecto. Referencias: artículos, sitios web>
 
 ## Antecedentes
-https://github.com/TZK-/Sokoban
-https://github.com/miki151/sokoban
-https://github.com/ktyx/sokoban
-https://github.com/CrizMobius/Sokoban
-https://github.com/zeekay/sokoban
-https://github.com/virgilLacondemine/Sokoban
+-https://github.com/TZK-/Sokoban
+-https://github.com/miki151/sokoban
+-https://github.com/ktyx/sokoban
+-https://github.com/CrizMobius/Sokoban
+-https://github.com/zeekay/sokoban
+-https://github.com/virgilLacondemine/Sokoban
 
 # Objetivos
 
