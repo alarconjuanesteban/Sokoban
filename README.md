@@ -36,21 +36,34 @@ https://github.com/zeekay/sokoban
 
 https://github.com/virgilLacondemine/Sokoban
 
+<Aplicaciones similares, url's de los repos>
+https://www.openprocessing.org/sketch/388015  por Jacob joaquin
 
 # Objetivos
 
 ## General
 
-Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban funcional y agradable de usar para cualquier persona.
+Aplicar los conocimientos de la programación orientada a objetos (POO) para la realización de un juego Sokoban, el cual debe ser totalmente funcional con diferentes niveles, con una interfaz interactiva y agradable, además de muy divertido.
 
 ## Específicos
 
-**1.** Crear una aplicación sencilla de usar y agradable de utilizar por los usuarios.
-
-**2.** Utilizar los conocimientos aprendidos para resolver los problemas propuestos de la mejor manera posible.
-
-**3.** Practicar la escritura y diseño de código para eventualmente masterizarla.
+<Desglose el objetivo general en específicos>
 
 # Requisitos
 
-Se usará el lenguaje de Processing en la IDE Atom.
+- Se usara la IDE de lenguaje de Processing en atom
+- Sera desarrollado en lenguaje Java
+- Correrá en cualquier computador con Win XP o mayor
+- Se podrá realizar acciones en un mapa 2D como mover cajas, desplazamiento del jugador, etc.
+- Habrá una verificación del nivel automática.
+- No se podrá seguir de nivel sin completar el anterior.
+- Se crearan múltiples niveles y menús.
+- Su jugabilidad será por teclado.
+- Debe leer niveles o mapas desde un archivo .Json.
+Opción de creación de niveles.
+   -  Verificación si el nivel tiene solución.
+   -  Mostrar solución. 
+Modos adicionales
+  -  Supervivencia
+  -  Contrarreloj 
+
