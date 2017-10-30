@@ -47,7 +47,17 @@ Aplicar los conocimientos de la programación orientada a objetos (POO) para la 
 
 ## Específicos
 
-<Desglose el objetivo general en específicos>
+- Crear un repositorio en GitHub para trabajar con múltiples personas. 
+- Crear múltiples menús.
+- Crear una matriz o mapa de acciones o escenario.
+- Crear múltiples niveles.
+- Hacer un personaje.
+- Inventar el modo para que el personaje se mueva y desplace objetos como cajas.
+- Mapear los movimientos de las caja para mostrar la solución a cada problema.
+- Hacer método de verificacion.
+- Crear la posibilidad de cargar escenarios desde archivos .Json.
+- Hacer un creador de niveles.
+
 
 # Requisitos
 
