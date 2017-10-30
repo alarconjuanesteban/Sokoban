@@ -36,7 +36,6 @@ https://github.com/zeekay/sokoban
 
 https://github.com/virgilLacondemine/Sokoban
 
-<Aplicaciones similares, url's de los repos>
 https://www.openprocessing.org/sketch/388015  por Jacob joaquin
 
 # Objetivos
@@ -70,9 +69,11 @@ Aplicar los conocimientos de la programación orientada a objetos (POO) para la 
 - Se crearan múltiples niveles y menús.
 - Su jugabilidad será por teclado.
 - Debe leer niveles o mapas desde un archivo .Json.
+
 Opción de creación de niveles.
    -  Verificación si el nivel tiene solución.
    -  Mostrar solución. 
+
 Modos adicionales
   -  Supervivencia
   -  Contrarreloj 
