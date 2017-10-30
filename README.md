@@ -5,6 +5,8 @@
 | Nombre | Github nickname |
 |--------|-----------------|
 |Juan Esteban Alarcón Bravo | alarconjuanesteban|
+|Johan Quiroga | noxgitjohan|
+|Andrés Rodriguez | afrodriguezfl|
 
 # Introducción
 
@@ -24,7 +26,7 @@
 
 ## General
 
-Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban funcional y agradable de usar para cualquiera.
+Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban funcional y agradable de usar para cualquier persona.
 
 ## Específicos
 
