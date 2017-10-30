@@ -12,7 +12,7 @@
 
 ## Problemática
 
-<En este proyecto pretendemos profundizar en loo conceptos de la programación orientada a objetos (OOP), enfocandolos al juego de puzzles "Sokoban", buscando resolver los problemas que se describen en los objetivos. >
+En este proyecto pretendemos profundizar en loo conceptos de la programación orientada a objetos (OOP), enfocandolos al juego de puzzles "Sokoban", buscando resolver los problemas que se describen en los objetivos. 
 
 ## Marco teórico
 
