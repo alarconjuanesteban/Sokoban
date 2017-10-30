@@ -1,12 +1,10 @@
-# Título del proyecto
+# Sokoban
 
 # Integrantes
 
-<Complete la siguiente tabla>
-
 | Nombre | Github nickname |
 |--------|-----------------|
-|        |                 |
+|Juan Esteban Alarcón Bravo | alarconjuanesteban|
 
 # Introducción
 
@@ -26,7 +24,7 @@
 
 ## General
 
-<Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban funcional y agradable de usar para cualquiera.>
+Aplicar los conocimientos adquiridos en clase en la creación de un Sokoban funcional y agradable de usar para cualquiera.
 
 ## Específicos
 
@@ -34,4 +32,4 @@
 
 # Requisitos
 
-<Se usará el lenguaje de Processing en la IDE Atom.>
+Se usará el lenguaje de Processing en la IDE Atom.
