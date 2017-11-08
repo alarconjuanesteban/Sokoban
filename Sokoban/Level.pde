@@ -5,7 +5,7 @@ class Level{
   
   // desplazamiento vertical, centrado. 
  
- 
+ int x,y;
  int alto;
  int ancho;
  int a;
@@ -14,7 +14,8 @@ class Level{
  PImage diamante;
  PImage texturamapa;
  PImage piso;
-Table table;
+ Table table;
+Player jugador1 = new Player();
 
    void level(){
      
@@ -22,6 +23,7 @@ Table table;
    diamante = loadImage("diamante.jpg"); //<>//
    texturamapa = loadImage("Textura mapa.jpg"); 
    piso = loadImage("Piso.jpg"); 
+   
    
    }
    
@@ -90,6 +92,13 @@ Table table;
             diamante.resize(height/ancho-1, height/alto-1);
             image(diamante, j*(height/ancho), i*(height/alto));
            }
+           if (valor == 4){
+             
+             jugador1.draw(alto,ancho);
+             jugador1.seti(i);
+             jugador1.setj(j);
+                             
+           }
                           
           popStyle();
           
@@ -97,4 +106,21 @@ Table table;
      }
      popMatrix();
    }
+        
+ void arriba() {
+ int i=0;
+  int j=0;
+      i=jugador1.geti();
+      println(i);
+      jugador1.seti(i);
+      j=jugador1.getj();
+      jugador1.setj(j);
+      int pr = table.getInt(i+1,j);
+      table.setInt(i+1,j, 4);
+      table.setInt(18,10, 4);
+       println(i,j, pr);
+  
+  
+} 
+   
 }
