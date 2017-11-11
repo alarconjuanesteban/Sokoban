@@ -1,4 +1,3 @@
-//  Archivo Principal, aquí inicia la ejecución del programa.
 Level prueba = new Level();
 Player jugador = new Player();
 int lvl = 2;
@@ -10,10 +9,10 @@ void setup(){
 
 void draw(){  
   
-  background(1000,1000,1000);
+  background(0,0,0);
   
   prueba.level(lvl);
-  prueba.grilla();
+  prueba.vacio();
   prueba.Print();
   jugador.draw(lvl);
   fill(0,0,0);
@@ -21,5 +20,5 @@ void draw(){
 }
 
   void keyPressed() {
-    //Movimiento.keyPressed()
+      //jugador.keyPressed();
   }
