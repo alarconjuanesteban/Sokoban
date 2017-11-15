@@ -8,25 +8,25 @@ class Level{
  int x,y;
  int alto;
  int ancho;
- int a;
  int valor;
  PImage caja;
  PImage diamante;
- PImage texturamapa;
+ PImage vacio;
+ PImage pared;
  PImage piso;
  Table table;
- Table dataTable;
 
    void level(){
      caja = loadImage("/data/Images/Cajas/1.png");
      diamante = loadImage("/data/Images/diamante.png"); //<>//
-     texturamapa = loadImage("/data/Images/Vacio/2.png"); 
-     piso = loadImage("/data/Images/Piso.png");
-     
+     vacio = loadImage("/data/Images/Vacio/2.png");
+     pared = loadImage("/data/Images/Pared/1.png");     
    }
    
    void level(int lvl){
       dataTable = loadTable("data/lvldata.csv");
+      alto = dataTable.getInt(lvl-1, 0);
+      ancho = dataTable.getInt(lvl-1, 1);
       switch (lvl){
         case 1:
           table = loadTable("data/lvl1.csv");
@@ -38,31 +38,33 @@ class Level{
           table = loadTable("data/lvl3.csv");
         break;
       }
-     alto = dataTable.getInt(lvl-1, 0);
-     ancho = dataTable.getInt(lvl-1, 1);
     }
    
-   void vacio(){
+   void escenario(){
      pushMatrix();
-     translate((width-height)/2,0);
-     for(int i=0 ; i<alto ; i++){
-       for(int j=0 ; j<ancho; j++){
-         int valor = table.getInt(i,j);
-         if (valor == 0){
-           pushStyle();
-             texturamapa = loadImage("/data/Images/Vacio/2.png"); 
-             texturamapa.resize(height/ancho, height/alto);
-             image(texturamapa, 0*(height/ancho), 0*(height/alto));
-             image(texturamapa, 1*(height/ancho), 0*(height/alto));
-             image(texturamapa, j*(height/ancho), i*(height/alto));
-           popStyle();
+       translate((width-height)/2, 0);
+       for(int i=0 ; i<alto ; i++){
+         for(int j=0 ; j<ancho; j++){
+           int valor = table.getInt(i,j);
+           if (valor == 1){
+             pushStyle();
+               pared = loadImage("/data/Images/Pared/1.png");
+               pared.resize(height/ancho, height/alto);
+               image(pared, j*(height/ancho), i*(height/alto));
+             popStyle();
+           }else{
+             pushStyle();
+               vacio = loadImage("/data/Images/Vacio/2.png");
+               vacio.resize(height/ancho, height/alto);
+               image(vacio, j*(height/ancho), i*(height/alto));
+             popStyle();
+           }
          }
        }
-     }
      popMatrix();
    }
    
-   void Print(){
+   void elementos(){
      pushMatrix();
      translate((width-height)/2,0);
      for(int i=0 ; i<alto ; i++){
@@ -70,17 +72,12 @@ class Level{
          pushStyle();
            int valor = table.getInt(i,j);
            switch(valor){
-             case 1:
-               piso = loadImage("/data/Images/Pared/1.png");
-               piso.resize(height/ancho, height/alto);
-               image(piso, j*(height/ancho), i*(height/alto));
-             break;
-             case 2:
+             case 2: // Cajas
                caja = loadImage("/data/Images/Cajas/1.png");
                caja.resize(height/ancho, height/alto);
                image(caja, j*(height/ancho), i*(height/alto));
              break;
-             case 3:
+             case 3: // Diamantes
                diamante = loadImage("/data/Images/Diamante/1.png");
                diamante.resize(height/ancho-1, height/alto-1);
                image(diamante, j*(height/ancho), i*(height/alto));
@@ -91,4 +88,5 @@ class Level{
      }
      popMatrix();
    }
+
 }

@@ -1,7 +1,6 @@
 class Player{
   
   PImage jugador;
-  Table dataTable;
 
   Player(){}
 

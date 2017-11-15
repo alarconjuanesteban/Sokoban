@@ -1,5 +1,7 @@
 Level prueba = new Level();
 Player jugador = new Player();
+//Movimiento mov = new Movimiento();
+Table dataTable;
 int lvl = 2;
 
 void setup(){
@@ -12,13 +14,13 @@ void draw(){
   background(0,0,0);
   
   prueba.level(lvl);
-  prueba.vacio();
-  prueba.Print();
+  prueba.escenario();
+  prueba.elementos();
   jugador.draw(lvl);
   fill(0,0,0);
   
 }
 
   void keyPressed() {
-      //jugador.keyPressed();
+      //mov.keyPressed();
   }
