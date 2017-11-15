@@ -19,25 +19,16 @@ class Level{
    void level(){
      caja = loadImage("/data/Images/Cajas/1.png");
      diamante = loadImage("/data/Images/diamante.png"); //<>//
-     vacio = loadImage("/data/Images/Vacio/2.png");
-     pared = loadImage("/data/Images/Pared/1.png");     
+     piso = loadImage("/data/Images/Piso/1.png");
+     vacio = loadImage("/data/Images/Vacio/1.png");
+     pared = loadImage("/data/Images/Pared/1.png");
    }
    
    void level(int lvl){
       dataTable = loadTable("data/lvldata.csv");
       alto = dataTable.getInt(lvl-1, 0);
       ancho = dataTable.getInt(lvl-1, 1);
-      switch (lvl){
-        case 1:
-          table = loadTable("data/lvl1.csv");
-        break;
-        case 2:
-          table = loadTable("data/lvl2.csv");
-        break;
-        case 3:
-          table = loadTable("data/lvl3.csv");
-        break;
-      }
+      table = loadTable("data/lvl"+ lvl +".csv");
     }
    
    void escenario(){
@@ -52,11 +43,20 @@ class Level{
                pared.resize(height/ancho, height/alto);
                image(pared, j*(height/ancho), i*(height/alto));
              popStyle();
-           }else{
+           }
+           /*if (valor == 9){
              pushStyle();
-               vacio = loadImage("/data/Images/Vacio/2.png");
+               vacio = loadImage("/data/Images/Vacio/1.png");
                vacio.resize(height/ancho, height/alto);
                image(vacio, j*(height/ancho), i*(height/alto));
+             popStyle();
+           }*/
+           
+           if (valor == 0 || valor == 2){
+             pushStyle();
+               piso = loadImage("/data/Images/Piso/1.png");
+               piso.resize(height/ancho, height/alto);
+               image(piso, j*(height/ancho), i*(height/alto));
              popStyle();
            }
          }
