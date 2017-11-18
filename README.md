@@ -36,7 +36,7 @@ https://github.com/zeekay/sokoban
 
 https://github.com/virgilLacondemine/Sokoban
 
-https://www.openprocessing.org/sketch/388015  por Jacob joaquin
+https://www.openprocessing.org/sketch/388015  _por Jacob Joaquin_
 
 # Objetivos
 
@@ -54,7 +54,7 @@ Aplicar los conocimientos de la programación orientada a objetos (POO) para la 
 - Inventar el modo para que el personaje se mueva y desplace objetos como cajas.
 - Mapear los movimientos de las caja para mostrar la solución a cada problema.
 - Hacer método de verificacion.
-- Crear la posibilidad de cargar escenarios desde archivos .Json.
+- Crear la posibilidad de cargar escenarios desde archivos _.csv_.
 - Hacer un creador de niveles.
 
 
@@ -66,9 +66,9 @@ Aplicar los conocimientos de la programación orientada a objetos (POO) para la 
 - Se podrá realizar acciones en un mapa 2D como mover cajas, desplazamiento del jugador, etc.
 - Habrá una verificación del nivel automática.
 - No se podrá seguir de nivel sin completar el anterior.
-- Se crearan múltiples niveles y menús.
+- Se crearán múltiples niveles y menús.
 - Su jugabilidad será por teclado.
-- Debe leer niveles o mapas desde un archivo .Json.
+- Debe leer niveles o mapas desde un archivo _.csv_.
 
 Opción de creación de niveles.
    -  Verificación si el nivel tiene solución.
