@@ -3,6 +3,11 @@ Player jugador = new Player();
 //Movimiento mov = new Movimiento();
 Table dataTable;
 int lvl = 1;
+int piso = 4;
+int pared = 2;
+int caja = 1;
+int diamante = 7;
+int J = 1;
 int mov = 2;
 
 void setup(){
@@ -11,12 +16,12 @@ void setup(){
   jugador.xyJugador();  
 }
 
-void draw(){  
+void draw(){
   
   background(72,47,23);
 
-  prueba.escenario();
-  prueba.elementos();
+  prueba.escenario(pared, piso);
+  prueba.elementos(caja, diamante);
   jugador.draw(lvl);
   fill(0,0,0);
   
