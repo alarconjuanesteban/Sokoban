@@ -85,4 +85,13 @@ class Level{
      popMatrix();
    }
 
+
+int conocer_elemento(int i,int j){
+
+int elemento = table.getInt(i,j);
+
+return elemento;}
+
+
+
 }

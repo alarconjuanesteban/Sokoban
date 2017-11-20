@@ -9,6 +9,7 @@ int caja = 1;
 int diamante = 7;
 int J = 1;
 int mov = 2;
+int numero_elemento;
 
 void setup(){
   size(700,700);
@@ -17,6 +18,7 @@ void setup(){
 }
 
 void draw(){
+
   
   background(72,47,23);
 
@@ -25,10 +27,24 @@ void draw(){
   jugador.draw(lvl);
   fill(0,0,0);
   
+  
+  
 }
 
+void el (){
+  int xjugador = 0; 
+  int yjugador = 0;
+  xjugador = jugador.getxJugador(); 
+  yjugador = jugador.getyJugador(); 
+  yjugador  = yjugador-1;
+  numero_elemento = prueba.conocer_elemento(xjugador,yjugador);
+  
+  println(xjugador,yjugador,numero_elemento );
+  }
+  
   void keyPressed() {
     if ((key == CODED && keyCode == UP) || (key == 'w') || (key == 'W'))
+      el();
       mov = 1;
     if ((key == CODED && keyCode == DOWN) || (key == 's') || (key == 'S'))
       mov = 2;

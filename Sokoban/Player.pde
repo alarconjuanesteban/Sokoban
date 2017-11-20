@@ -18,6 +18,7 @@ class Player{
     image(jugador, xJugador*(height/ancho), yJugador*(height/alto));
   }
   
+ 
   void xyJugador(){
     xJugador = dataTable.getInt(lvl-1, 2);
     yJugador = dataTable.getInt(lvl-1, 3)-1;
@@ -28,7 +29,9 @@ class Player{
     switch(movTemp){
       case 1: // Arriba
         x = yJugador - 1;
+        if (numero_elemento ==1 ){
         yJugador = x;
+        }
         jugador = loadImage("/data/Images/Jugador/"+ J +"/J"+ J +"-up.png");
         mov = 0;
       break;
@@ -51,6 +54,19 @@ class Player{
         mov = 0;
       break;
     }
+  }
+
+public void setxJugador(int x) {
+    x = xJugador;
+  }
+   public int getxJugador() {
+    return xJugador;
+  }
+   public void setyJugador(int y) {
+    y = yJugador;
+  }
+   public int getyJugador() {
+    return yJugador;
   }
 
 }
