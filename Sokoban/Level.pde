@@ -33,6 +33,8 @@ class Level{
       transAlto = (height-(((int)(height/alto))*alto))/2;
       transAncho = (height-(((int)(height/ancho))*ancho))/2;
       table = loadTable("data/Niveles/lvl"+ lvl +".csv");
+      int elemento = table.getInt(4,1);
+      println(elemento);
     }
    
    void escenario(int tPared, int tPiso){
@@ -89,7 +91,7 @@ class Level{
 int conocer_elemento(int i,int j){
 
 int elemento = table.getInt(i,j);
-
+println(elemento);
 return elemento;}
 
 

@@ -29,7 +29,7 @@ class Player{
     switch(movTemp){
       case 1: // Arriba
         x = yJugador - 1;
-        if (numero_elemento ==1 ){
+        if (numero_elemento ==0 ){
         yJugador = x;
         }
         jugador = loadImage("/data/Images/Jugador/"+ J +"/J"+ J +"-up.png");
