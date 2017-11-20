@@ -87,13 +87,30 @@ class Level{
      popMatrix();
    }
 
-
-int conocer_elemento(int i,int j){
-
-int elemento = table.getInt(i,j);
-println(elemento);
-return elemento;}
-
-
+  
+  int conocer_elemento(int i,int j){
+    int elemento = table.getInt(i,j);
+    return elemento;
+  }
+  
+  void movCajaArriba(int direccionY, int direccionX){
+    table.setInt(direccionX, direccionY, 0);
+    table.setInt(direccionX-1, direccionY, 2);
+  } 
+  
+  void movCajaAbajo(int direccionY, int direccionX){
+    table.setInt(direccionX, direccionY, 0);
+    table.setInt(direccionX+1, direccionY, 2);
+  }
+  
+  void movCajaDerecha(int direccionY, int direccionX){
+    table.setInt(direccionX, direccionY-1, 0);
+    table.setInt(direccionX, direccionY, 2);
+  }
+  
+  void movCajaIzquierda(int direccionY, int direccionX){
+    table.setInt(direccionX, direccionY+1, 0);
+    table.setInt(direccionX, direccionY, 2);
+  }
 
 }

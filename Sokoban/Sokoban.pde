@@ -10,6 +10,7 @@ int diamante = 7;
 int J = 1;
 int mov = 2;
 int numero_elemento;
+int posCaja;
 
 void setup(){
   size(700,700);
@@ -18,7 +19,6 @@ void setup(){
 }
 
 void draw(){
-
   
   background(72,47,23);
 
@@ -28,23 +28,49 @@ void draw(){
   fill(0,0,0);
   
   
-  
 }
 
-void el (){
-  int xjugador = 0; 
-  int yjugador = 0;
-  xjugador = jugador.getxJugador(); 
-  yjugador = jugador.getyJugador(); 
-  yjugador  = yjugador-1;
-  numero_elemento = prueba.conocer_elemento(xjugador,yjugador);
+void colision(int direccionX, int direccionY){
+  int xJugador;
+  int yJugador;
+  xJugador = jugador.getxJugador();  
+  yJugador = jugador.getyJugador();
   
-  println(xjugador,yjugador,numero_elemento );
+  xJugador  = xJugador + direccionX;
+  yJugador  = yJugador + direccionY;
+  
+  numero_elemento = prueba.conocer_elemento(yJugador,xJugador);
+  posCaja = prueba.conocer_elemento(yJugador,xJugador);
+  println(posCaja);
+}
+
+void moverCaja(int direccionX, int direccionY, int caso){
+  int xJugador;
+  int yJugador;
+  xJugador = jugador.getxJugador();  
+  yJugador = jugador.getyJugador();
+  
+  xJugador  = xJugador + direccionX;
+  yJugador  = yJugador + direccionY;
+  
+  switch(caso){
+    case 1:
+      prueba.movCajaArriba(xJugador, yJugador);
+    break;
+    case 2:
+      prueba.movCajaAbajo(xJugador, yJugador);
+    break;
+    case 3:
+      prueba.movCajaDerecha(xJugador, yJugador);
+    break;
+    case 4:
+      prueba.movCajaIzquierda(xJugador, yJugador);
+    break;
   }
+}
   
   void keyPressed() {
     if ((key == CODED && keyCode == UP) || (key == 'w') || (key == 'W'))
-      el();
       mov = 1;
     if ((key == CODED && keyCode == DOWN) || (key == 's') || (key == 'S'))
       mov = 2;
