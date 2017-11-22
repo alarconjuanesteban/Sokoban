@@ -11,6 +11,7 @@ class Level{
  int transAlto;
  int transAncho;
  int valor;
+ boolean tipoCaja;
  PImage caja;
  PImage diamante;
  PImage vacio;
@@ -31,6 +32,7 @@ class Level{
       ancho = dataTable.getInt(lvl-1, 1);
       transAlto = (height-(((int)(height/alto))*alto))/2;
       transAncho = (height-(((int)(height/ancho))*ancho))/2;
+      tipoCaja = true;
       table = loadTable("data/Niveles/lvl"+ lvl +".csv");
     }
    
@@ -67,7 +69,7 @@ class Level{
          pushStyle();
            int valor = table.getInt(i,j);
            switch(valor){
-             case 2: // Cajas
+             case 2: // Caja Brillante
                caja = loadImage("/data/Images/Caja/Brillante/"+ tCaja +".png");
                caja.resize(height/ancho, height/alto);
                image(caja, j*(height/ancho), i*(height/alto));
@@ -77,37 +79,90 @@ class Level{
                diamante.resize(height/ancho-1, height/alto-1);
                image(diamante, j*(height/ancho), i*(height/alto));
              break;
+             case 4: // Caja Opaca
+               caja = loadImage("/data/Images/Caja/Opaca/"+ tCaja +".png");
+               caja.resize(height/ancho, height/alto);
+               image(caja, j*(height/ancho), i*(height/alto));
+             break;
            }
          popStyle();
        }
      }
      popMatrix();
    }
-
+   
+   int contador(){
+     int temp = 0;
+     for(int i=0 ; i<alto ; i++){
+       for(int j=0 ; j<ancho; j++){
+         int valor = table.getInt(i,j);
+         if (valor == 2)
+           temp += 1;
+       }
+     }
+     return temp;
+   }
+  
+   void completo(){
+     if (contador() == 0)
+       background(255,255,255);
+   }
   
   int conocer_elemento(int i,int j){
     int elemento = table.getInt(i,j);
     return elemento;
   }
   
-  void movCajaArriba(int direccionY, int direccionX){
-    table.setInt(direccionX, direccionY, 0);
-    table.setInt(direccionX-1, direccionY, 2);
+  void movCajaArriba(int direccionX, int direccionY){
+    colision(0,-2);
+    if (numero_elemento == 3)
+      table.setInt(direccionY-1, direccionX, 4);
+    else
+      table.setInt(direccionY-1, direccionX, 2);
+    colision(0,-1);
+    if (numero_elemento == 4)
+      table.setInt(direccionY, direccionX, 3);
+    else
+      table.setInt(direccionY, direccionX, 0);
   } 
   
-  void movCajaAbajo(int direccionY, int direccionX){
-    table.setInt(direccionX, direccionY, 0);
-    table.setInt(direccionX+1, direccionY, 2);
+  void movCajaAbajo(int direccionX, int direccionY){
+    colision(0,2);
+    if (numero_elemento == 3)
+      table.setInt(direccionY+1, direccionX, 4);
+    else
+      table.setInt(direccionY+1, direccionX, 2);
+    colision(0,1);
+    if (numero_elemento == 4)
+      table.setInt(direccionY, direccionX, 3);
+    else
+      table.setInt(direccionY, direccionX, 0);
   }
   
   void movCajaDerecha(int direccionX, int direccionY){
-    table.setInt(direccionY, direccionX, 0);
-    table.setInt(direccionY, direccionX+1, 2);
+    colision(2,0);
+    if (numero_elemento == 3)
+      table.setInt(direccionY, direccionX+1, 4);
+    else
+      table.setInt(direccionY, direccionX+1, 2);
+    colision(1,0);
+    if (numero_elemento == 4)
+      table.setInt(direccionY, direccionX, 3);
+    else
+      table.setInt(direccionY, direccionX, 0);
   }
   
-  void movCajaIzquierda(int direccionY, int direccionX){
-    table.setInt(direccionX, direccionY, 0);
-    table.setInt(direccionX, direccionY-1, 2);
+  void movCajaIzquierda(int direccionX, int direccionY){
+    colision(-2,0);
+    if (numero_elemento == 3)
+      table.setInt(direccionY, direccionX-1, 4);
+    else
+      table.setInt(direccionY, direccionX-1, 2);
+    colision(-1,0);
+    if (numero_elemento == 4)
+      table.setInt(direccionY, direccionX, 3);
+    else
+      table.setInt(direccionY, direccionX, 0);
   }
 
 }

@@ -1,4 +1,4 @@
-class Player{
+class Player extends Level{
   
   PImage jugador;
   int alto;
@@ -33,7 +33,7 @@ class Player{
         if (numero_elemento == 0 || numero_elemento == 3){
           yJugador = movTemp;
         }
-        if (numero_elemento == 2){
+        if (numero_elemento == 2 || numero_elemento == 4){
           colision(0,-2);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(0,-1,1);
@@ -49,7 +49,7 @@ class Player{
         if (numero_elemento == 0 || numero_elemento == 3){
           yJugador = movTemp;
         }
-        if (numero_elemento == 2){
+        if (numero_elemento == 2 || numero_elemento == 4){
           colision(0,2);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(0,1,2);
@@ -65,7 +65,7 @@ class Player{
         if (numero_elemento == 0 || numero_elemento == 3){
           xJugador = movTemp;
         }
-        if (numero_elemento == 2){
+        if (numero_elemento == 2 || numero_elemento == 4){
           colision(2,0);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(1,0,3);
@@ -81,7 +81,7 @@ class Player{
         if (numero_elemento == 0 || numero_elemento == 3){
           xJugador = movTemp;
         }
-        if (numero_elemento == 2){
+        if (numero_elemento == 2 || numero_elemento == 4){
           colision(-2,0);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(-1,0,4);

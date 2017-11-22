@@ -2,7 +2,7 @@ Level prueba = new Level();
 Player jugador = new Player();
 //Movimiento mov = new Movimiento();
 Table dataTable;
-int lvl = 1;
+int lvl = 2;
 int piso = 4;
 int pared = 2;
 int caja = 1;
@@ -15,7 +15,7 @@ int posCaja;
 void setup(){
   size(700,700);
   prueba.level(lvl);
-  jugador.xyJugador();  
+  jugador.xyJugador();
 }
 
 void draw(){
@@ -25,8 +25,7 @@ void draw(){
   prueba.escenario(pared, piso);
   prueba.elementos(caja, diamante);
   jugador.draw(lvl);
-  fill(0,0,0);
-  
+  prueba.completo();
   
 }
 
