@@ -22,7 +22,6 @@ class Level{
      caja = loadImage("/data/Images/Caja/Brillante/1.png");
      diamante = loadImage("/data/Images/Diamante/1.png"); //<>//
      piso = loadImage("/data/Images/Piso/1.png");
-     //vacio = loadImage("/data/Images/Vacio/1.png");
      pared = loadImage("/data/Images/Pared/1.png");
    }
    
@@ -33,8 +32,6 @@ class Level{
       transAlto = (height-(((int)(height/alto))*alto))/2;
       transAncho = (height-(((int)(height/ancho))*ancho))/2;
       table = loadTable("data/Niveles/lvl"+ lvl +".csv");
-      int elemento = table.getInt(4,1);
-      println(elemento);
     }
    
    void escenario(int tPared, int tPiso){
@@ -103,14 +100,14 @@ class Level{
     table.setInt(direccionX+1, direccionY, 2);
   }
   
-  void movCajaDerecha(int direccionY, int direccionX){
-    table.setInt(direccionX, direccionY-1, 0);
-    table.setInt(direccionX, direccionY, 2);
+  void movCajaDerecha(int direccionX, int direccionY){
+    table.setInt(direccionY, direccionX, 0);
+    table.setInt(direccionY, direccionX+1, 2);
   }
   
   void movCajaIzquierda(int direccionY, int direccionX){
-    table.setInt(direccionX, direccionY+1, 0);
-    table.setInt(direccionX, direccionY, 2);
+    table.setInt(direccionX, direccionY, 0);
+    table.setInt(direccionX, direccionY-1, 2);
   }
 
 }

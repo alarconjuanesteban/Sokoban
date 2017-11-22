@@ -24,68 +24,68 @@ class Player{
     yJugador = dataTable.getInt(lvl-1, 3)-1;
   }
   
-  void movimiento(int movTemp){
-    int x;
-    switch(movTemp){
+  void movimiento(int movCase){
+    int movTemp;
+    switch(movCase){
       case 1: // Arriba
-        x = yJugador - 1;
+        movTemp = yJugador - 1;
         colision(0,-1);
         if (numero_elemento == 0 || numero_elemento == 3){
-          yJugador = x;
+          yJugador = movTemp;
         }
         if (numero_elemento == 2){
           colision(0,-2);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(0,-1,1);
-            yJugador = x;
+            yJugador = movTemp;
           }
         }
         jugador = loadImage("/data/Images/Jugador/"+ J +"/J"+ J +"-up.png");
         mov = 0;
       break;
       case 2: // Abajo
-        x = yJugador + 1;
+        movTemp = yJugador + 1;
         colision(0,1);
         if (numero_elemento == 0 || numero_elemento == 3){
-          yJugador = x;
+          yJugador = movTemp;
         }
         if (numero_elemento == 2){
           colision(0,2);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(0,1,2);
-            yJugador = x;
+            yJugador = movTemp;
           } 
         }
         jugador = loadImage("/data/Images/Jugador/"+ J +"/J"+ J +"-down.png");
         mov = 0;
       break;
       case 3:  // Derecha
-        x = xJugador + 1;
+        movTemp = xJugador + 1;
         colision(1,0);
         if (numero_elemento == 0 || numero_elemento == 3){
-          xJugador = x;
+          xJugador = movTemp;
         }
         if (numero_elemento == 2){
           colision(2,0);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(1,0,3);
-            xJugador = x;
+            xJugador = movTemp;
           }
         }
         jugador = loadImage("/data/Images/Jugador/"+ J +"/J"+ J +"-right.png");
         mov = 0;
       break;
       case 4: // Izquierda
-        x = xJugador - 1;
+        movTemp = xJugador - 1;
         colision(-1,0);
         if (numero_elemento == 0 || numero_elemento == 3){
-          xJugador = x;
+          xJugador = movTemp;
         }
         if (numero_elemento == 2){
           colision(-2,0);
           if (numero_elemento == 0 || numero_elemento == 3){
             moverCaja(-1,0,4);
-            xJugador = x;
+            xJugador = movTemp;
           }
         }
         jugador = loadImage("/data/Images/Jugador/"+ J +"/J"+ J +"-left.png");

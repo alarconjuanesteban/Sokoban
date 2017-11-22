@@ -36,12 +36,11 @@ void colision(int direccionX, int direccionY){
   xJugador = jugador.getxJugador();  
   yJugador = jugador.getyJugador();
   
-  xJugador  = xJugador + direccionX;
-  yJugador  = yJugador + direccionY;
+  xJugador  += direccionX;
+  yJugador  += direccionY;
   
   numero_elemento = prueba.conocer_elemento(yJugador,xJugador);
-  posCaja = prueba.conocer_elemento(yJugador,xJugador);
-  println(posCaja);
+  //println(numero_elemento);
 }
 
 void moverCaja(int direccionX, int direccionY, int caso){
@@ -50,8 +49,8 @@ void moverCaja(int direccionX, int direccionY, int caso){
   xJugador = jugador.getxJugador();  
   yJugador = jugador.getyJugador();
   
-  xJugador  = xJugador + direccionX;
-  yJugador  = yJugador + direccionY;
+  xJugador  += direccionX;
+  yJugador  += direccionY;
   
   switch(caso){
     case 1:

@@ -1,4 +1,4 @@
-class Diamante extends Espacios{
+class Diamante extends Level{
 
   // Todo lo relacionado con los Diamantes:
   //    - Dibujo
