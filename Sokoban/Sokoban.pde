@@ -1,5 +1,8 @@
 Level prueba = new Level();
 Player jugador = new Player();
+Ventana inicio = new Inicio();
+Ventana creditos = new Creditos();
+Ventana lvls = new lvls();
 //Movimiento mov = new Movimiento();
 Table dataTable;
 int lvl = 2;
@@ -11,22 +14,38 @@ int J = 1;
 int mov = 2;
 int numero_elemento;
 int posCaja;
+char ventana_actual = 'i';
+int X, Y;
 
 void setup(){
   size(700,700);
   prueba.level(lvl);
   jugador.xyJugador();
+ 
 }
 
 void draw(){
   
-  background(72,47,23);
-
-  prueba.escenario(pared, piso);
-  prueba.elementos(caja, diamante);
-  jugador.draw(lvl);
-  prueba.completo();
-  
+  switch(ventana_actual){
+    case 'o':
+    inicio.opening();
+    break;
+    case 'i':
+    inicio.drawVentana();
+    break;
+    case 'c':
+    creditos.drawVentana();
+    break;
+    case 'l':
+    lvls.drawVentana();
+    break;
+    case 'j':
+    background(72,47,23);
+    prueba.escenario(pared, piso);
+    prueba.elementos(caja, diamante);
+    jugador.draw(lvl);
+    break;
+  }
 }
 
 void colision(int direccionX, int direccionY){
@@ -66,7 +85,17 @@ void moverCaja(int direccionX, int direccionY, int caso){
     break;
   }
 }
-  
+  public void mousePressed() {
+    X = mouseX;
+    Y = mouseY;
+ /* if (X > 100 && X < 77+100 && 
+      Y> 610 && Y < 610+200) {
+     ventana_actual = 'j';  
+      }*/
+
+  }
+
+
   void keyPressed() {
     if ((key == CODED && keyCode == UP) || (key == 'w') || (key == 'W'))
       mov = 1;
@@ -76,4 +105,12 @@ void moverCaja(int direccionX, int direccionY, int caso){
       mov = 3;
     if ((key == CODED && keyCode == LEFT) || (key == 'a') || (key == 'A'))
       mov = 4;
+  }
+  
+
+   public int getxmouse(){
+    return X;
+  }
+   public int getymouse(){
+    return Y;
   }
