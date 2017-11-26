@@ -10,5 +10,12 @@ class Player extends Movimiento{
     jugador.resize(height/ancho-1, height/alto-1);
     image(jugador, xJugador*(height/ancho), yJugador*(height/alto));
   }
+  
+  public void reset(){
+    xyJugador();
+    movimiento(2);
+    jugador.resize(height/ancho-1, height/alto-1);
+    image(jugador, xJugador*(height/ancho), yJugador*(height/alto));
+  }
 
 }

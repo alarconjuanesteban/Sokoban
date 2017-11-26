@@ -43,6 +43,7 @@ void draw(){
       background(72,47,23);
       prueba.escenario(pared, piso);
       prueba.elementos(caja, diamante);
+      prueba.completo();
       jugador.draw(lvl);
     break;
     case 'o':
@@ -114,6 +115,11 @@ void draw(){
       if ((key == 'P') || (key == 'p')){
         ventana_actual = 'l';
       }
+    }
+    
+    if ((key == 'R') || (key == 'r')){
+      prueba.reset();
+      jugador.reset();
     }
   }
 

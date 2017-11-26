@@ -81,22 +81,27 @@ class Level{
      popMatrix();
    }
    
-   private int contador(){
-     int temp = 0;
-     for(int i=0 ; i<alto ; i++){
-       for(int j=0 ; j<ancho; j++){
-         int valor = table.getInt(i,j);
-         if (valor == 2)
-           temp += 1;
-       }
-     }
-     return temp;
-   }
+    private int contador(){
+      int temp = 0;
+      for(int i=0 ; i<alto ; i++){
+        for(int j=0 ; j<ancho; j++){
+          int valor = table.getInt(i,j);
+          if (valor == 2)
+            temp += 1;
+        }
+      }
+      return temp;
+    }
   
-   public void completo(){
-     if (contador() == 0)
-       background(255,255,255);
-   }
+  public void completo(){
+    if (contador() == 0)
+      ventana_actual = 'l';
+  }
+  
+  public void reset(){
+    dataTable = loadTable("data/Niveles/lvldata.csv");
+    table = loadTable("data/Niveles/lvl"+ lvl +".csv");
+  }
   
   public int conocer_elemento(int i,int j){
     int elemento = table.getInt(i,j);
