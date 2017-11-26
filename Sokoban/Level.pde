@@ -154,5 +154,5 @@ class Level{
     else
       table.setInt(direccionY, direccionX, 0);
   }
-
+  
 }

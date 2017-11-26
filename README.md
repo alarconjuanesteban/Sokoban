@@ -5,7 +5,7 @@
 | Nombre | Github nickname |
 |--------|-----------------|
 |Juan Esteban Alarcón Bravo | alarconjuanesteban|
-|Johan Elias Quiroga Quintero | noxgitjohan|
+|Johan Quiroga | noxgitjohan|
 |Andrés Rodriguez | afrodriguezfl|
 
 # Introducción

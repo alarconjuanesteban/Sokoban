@@ -3,6 +3,9 @@ Player jugador = new Player();
 Ventana inicio = new Inicio();
 Ventana creditos = new Creditos();
 Ventana lvls = new lvls();
+Ventana opciones = new Opciones();
+Ventana vcreador = new Vcreador();
+Ventana extra = new Extra();
 
 Table dataTable;
 int lvl = 2;
@@ -24,7 +27,7 @@ void setup(){
 
 void draw(){
   switch(ventana_actual){
-    case 'o':
+    case 'p':
       inicio.opening();
     break;
     case 'i':
@@ -41,6 +44,15 @@ void draw(){
       prueba.escenario(pared, piso);
       prueba.elementos(caja, diamante);
       jugador.draw(lvl);
+    break;
+    case 'o':
+      opciones.drawVentana();
+    break;
+    case 'v':
+      vcreador.drawVentana();
+    break;
+    case 'e':
+      extra.drawVentana();
     break;
   }
 }
@@ -84,10 +96,6 @@ void moverCaja(int direccionX, int direccionY, int caso){
   public void mousePressed() {
     X = mouseX;
     Y = mouseY;
- /* if (X > 100 && X < 77+100 && 
-      Y> 610 && Y < 610+200) {
-     ventana_actual = 'j';  
-      }*/
 
   }
 
@@ -101,8 +109,13 @@ void moverCaja(int direccionX, int direccionY, int caso){
       mov = 3;
     if ((key == CODED && keyCode == LEFT) || (key == 'a') || (key == 'A'))
       mov = 4;
-  }
   
+  
+  if (ventana_actual == 'j'){
+   if ((key == 'P') || (key == 'p')){
+      ventana_actual = 'l';
+  }
+}}
 
    public int getxMouse(){
     return X;
