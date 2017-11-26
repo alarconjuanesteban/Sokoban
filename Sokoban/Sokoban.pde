@@ -3,7 +3,7 @@ Player jugador = new Player();
 Ventana inicio = new Inicio();
 Ventana creditos = new Creditos();
 Ventana lvls = new lvls();
-//Movimiento mov = new Movimiento();
+
 Table dataTable;
 int lvl = 2;
 int piso = 4;
@@ -13,37 +13,34 @@ int diamante = 7;
 int J = 1;
 int mov = 2;
 int numero_elemento;
-int posCaja;
 char ventana_actual = 'i';
 int X, Y;
 
 void setup(){
   size(700,700);
   prueba.level(lvl);
-  jugador.xyJugador();
- 
+  jugador.xyJugador(); 
 }
 
 void draw(){
-  
   switch(ventana_actual){
     case 'o':
-    inicio.opening();
+      inicio.opening();
     break;
     case 'i':
-    inicio.drawVentana();
+      inicio.drawVentana();
     break;
     case 'c':
-    creditos.drawVentana();
+      creditos.drawVentana();
     break;
     case 'l':
-    lvls.drawVentana();
+      lvls.drawVentana();
     break;
     case 'j':
-    background(72,47,23);
-    prueba.escenario(pared, piso);
-    prueba.elementos(caja, diamante);
-    jugador.draw(lvl);
+      background(72,47,23);
+      prueba.escenario(pared, piso);
+      prueba.elementos(caja, diamante);
+      jugador.draw(lvl);
     break;
   }
 }
@@ -58,7 +55,6 @@ void colision(int direccionX, int direccionY){
   yJugador  += direccionY;
   
   numero_elemento = prueba.conocer_elemento(yJugador,xJugador);
-  //println(numero_elemento);
 }
 
 void moverCaja(int direccionX, int direccionY, int caso){
@@ -108,9 +104,9 @@ void moverCaja(int direccionX, int direccionY, int caso){
   }
   
 
-   public int getxmouse(){
+   public int getxMouse(){
     return X;
   }
-   public int getymouse(){
+   public int getyMouse(){
     return Y;
   }
