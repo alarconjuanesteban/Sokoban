@@ -9,7 +9,7 @@ class Creador extends Level {
 
   Creador() {
   }
-  void draw() {
+  public void draw() {
     escenarioPrueba();
     texto();
     figuras();
@@ -25,6 +25,7 @@ class Creador extends Level {
     transAncho = ((width/3)*4-((int(height/ancho))*ancho))/2;
     cTable = loadTable("data/NivelesC/lvlCprueba.csv");
   }
+  
   public void escenarioPrueba() {
     pushMatrix();
     translate(transAncho, transAlto);
@@ -38,16 +39,16 @@ class Creador extends Level {
         }
         if (valor ==0) {
           pushStyle();
-          piso = loadImage("/data/Images/Piso/4.png");
-          piso.resize(height/ancho, height/alto);
-          image(piso, j*(height/ancho), i*(height/alto));
+            piso = loadImage("/data/Images/Piso/4.png");
+            piso.resize(height/ancho, height/alto);
+            image(piso, j*(height/ancho), i*(height/alto));
           popStyle();
         }
         if (valor ==2) {
           pushStyle();
-          caja = loadImage("/data/Images/Caja/Brillante/1.png");
-          caja.resize(height/ancho, height/alto);
-          image(caja, j*(height/ancho), i*(height/alto));
+            caja = loadImage("/data/Images/Caja/Brillante/1.png");
+            caja.resize(height/ancho, height/alto);
+            image(caja, j*(height/ancho), i*(height/alto));
           popStyle();
         }
         if (valor==3) {
@@ -100,48 +101,48 @@ class Creador extends Level {
       numeroElemento=6;
     }
     pushStyle();
-    elemento.resize(height/6, height/6);
-    image(elemento, (width/48)*6, (height/16)*7);
+      elemento.resize(height/6, height/6);
+      image(elemento, (width/48)*6, (height/16)*7);
     popStyle();
   }
   public void figuras() {
     pushStyle();
-    fill(255);
-    beginShape(TRIANGLES);
-    vertex((width/6)+width/12, (((height/8)*4))+(height/32));
-    vertex((width/6)+width/12, (((height/8)*4))-(height/32));
-    vertex((width/3)-width/32, (height/8)*4);
-    endShape();
-    beginShape(TRIANGLES);
-    vertex((width/6)-width/12, (((height/8)*4))+(height/32));
-    vertex((width/6)-width/12, (((height/8)*4))-(height/32));
-    vertex(width/32, (height/8)*4);
-    endShape();
+      fill(255);
+      beginShape(TRIANGLES);
+        vertex((width/6)+width/12, (((height/8)*4))+(height/32));
+        vertex((width/6)+width/12, (((height/8)*4))-(height/32));
+        vertex((width/3)-width/32, (height/8)*4);
+      endShape();
+      beginShape(TRIANGLES);
+        vertex((width/6)-width/12, (((height/8)*4))+(height/32));
+        vertex((width/6)-width/12, (((height/8)*4))-(height/32));
+        vertex(width/32, (height/8)*4);
+      endShape();
     popStyle();
   }
   public void texto() {
     pushStyle();
-    fill (255);
-    Text= loadFont("PressStart2P-30.vlw");
-    textFont(Text);
-    textAlign(CENTER, CENTER);
-    text("Size", (width/6), (height/8)-(height/16));
-    text("Objeto", (width/6), ((height/8)*3)-(height/16));
-    text("Atras", (width/6), ((height/8)*7)-(height/16));
-    text("Probar", (width/6), ((height/8)*8)-(height/16));
-
-    Text = loadFont("PressStart2P-20.vlw");
-    textFont(Text);  
-    textAlign(CENTER, CENTER);
-    text(nombre, (width/6), ((height/8)*6)-(height/16));
-
-    Text = loadFont("PressStart2P-10.vlw");
-    textFont(Text);  
-    textAlign(CENTER, CENTER);
-    text("+Columna", (width/12), (height/8)+(height/32));
-    text("-Columna", (width/12), (height/8)+(height/32)*3);
-    text("+Fila", (width/12)*3, (height/8)+(height/32));
-    text("-Fila", (width/12)*3, (height/8)+(height/32)*3);
+      fill (255);
+      Text= loadFont("PressStart2P-30.vlw");
+      textFont(Text);
+      textAlign(CENTER, CENTER);
+      text("Size", (width/6), (height/8)-(height/16));
+      text("Objeto", (width/6), ((height/8)*3)-(height/16));
+      text("Atras", (width/6), ((height/8)*7)-(height/16));
+      text("Probar", (width/6), ((height/8)*8)-(height/16));
+  
+      Text = loadFont("PressStart2P-20.vlw");
+      textFont(Text);  
+      textAlign(CENTER, CENTER);
+      text(nombre, (width/6), ((height/8)*6)-(height/16));
+  
+      Text = loadFont("PressStart2P-10.vlw");
+      textFont(Text);  
+      textAlign(CENTER, CENTER);
+      text("+Columna", (width/12), (height/8)+(height/32));
+      text("-Columna", (width/12), (height/8)+(height/32)*3);
+      text("+Fila", (width/12)*3, (height/8)+(height/32));
+      text("-Fila", (width/12)*3, (height/8)+(height/32)*3);
     popStyle();
   }
   public void botones() {
