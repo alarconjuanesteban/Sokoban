@@ -6,7 +6,7 @@ class Inicio extends Ventana {
    Inicio(){}
    
    @Override
-   void drawV(){
+   public void drawV(){
      letrero = loadImage("/data/Images/Sokoban/sokoban.png");
      letrero.resize(500, 420);
      image(letrero, 100 , height/8);
@@ -38,7 +38,7 @@ class Inicio extends Ventana {
    }
    
    @Override
-   public void opening(){     
+   public void opening(){
      background(255,255,255);
      fill(color(10,30,400));textSize(100); text("Powered by processing", 100,100);  
      ventana_actual = 'i';   

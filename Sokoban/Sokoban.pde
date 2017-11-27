@@ -22,7 +22,7 @@ int X, Y;
 void setup(){
   size(700,700);
   prueba.level(lvl);
-  jugador.xyJugador(); 
+  jugador.xyJugador();
 }
 
 void draw(){

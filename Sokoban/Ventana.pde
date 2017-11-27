@@ -1,4 +1,4 @@
-abstract class Ventana  {
+abstract class Ventana {
   
   protected PFont Pixel;
     

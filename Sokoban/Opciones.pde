@@ -1,8 +1,8 @@
 class Opciones extends Ventana {
   
-   private PImage matrix;
+  private PImage matrix;
     
-   Opciones(){}
+  Opciones(){}
    
   @Override
   void drawV(){
