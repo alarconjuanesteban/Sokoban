@@ -23,7 +23,7 @@ class Creditos extends Ventana {
        text("Andrés Felipe Rodriguez Florez", width/2, 240);
        text("Agradecimiento Especial a:", width/2, 300);
        text("Jean Pierre Charalambos Hernandez ", width/2, 320);
-       text("Monitor Nombre???", width/2, 340);
+       text("Julian Esteban Salomon Torres", width/2, 340);
 
        text("Texturas y Sprites", width/2, 420);
        text("Link, The Leyend Of Zelda, Nintendo®", width/2, 450);
