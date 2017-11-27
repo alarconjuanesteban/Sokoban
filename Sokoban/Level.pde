@@ -2,8 +2,8 @@ class Level{
  
    protected int alto;
    protected int ancho;
-   private int transAlto;
-   private int transAncho;
+   protected int transAlto;
+   protected int transAncho;
    protected PImage caja;
    protected PImage diamante;
    protected PImage pared;
@@ -21,8 +21,8 @@ class Level{
       dataTable = loadTable("data/Niveles/lvldata.csv");
       alto = dataTable.getInt(lvl-1, 0);
       ancho = dataTable.getInt(lvl-1, 1);
-      transAlto = (height-(((int)(height/alto))*alto))/2;
-      transAncho = (height-(((int)(height/ancho))*ancho))/2;
+      transAlto = (height-((int(height/alto))*alto))/2;
+      transAncho = (width-((int(height/ancho))*ancho))/2;
       table = loadTable("data/Niveles/lvl"+ lvl +".csv");
     }
    

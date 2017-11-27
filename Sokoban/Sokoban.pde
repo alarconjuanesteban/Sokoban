@@ -21,8 +21,7 @@ char ventana_actual = 'i';
 int X, Y;
 
 void setup(){
-  //size(700,700);
- fullScreen();
+  fullScreen();
   prueba.level(lvl);
   jugador.xyJugador();
 }
