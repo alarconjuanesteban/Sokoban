@@ -2,16 +2,26 @@ class Creador extends Level {
   protected PFont Text;
   protected int numeroElemento=0;
   protected PImage elemento;
-  String nombre = "Piso";
+  protected String nombre = "Piso";
+  protected Table cTable;
 
-  Creador() {
-  }
+  /*  Creador() {
+      datacTable = loadTable("data/NivelesC/lvlCdata.csv");
+      alto = datacTable.getInt(0, 0);
+      ancho = datacTable.getInt(0, 1);
+      transAlto = (height-(((int)(height/alto))*alto))/2;
+      transAncho = (height-(((int)(height/ancho))*ancho))/2;
+      cTable = loadTable("data/NivelesC/lvlCprueba.csv");
+  }*/
   public void drawCreador() {
     texto();
     figuras();
     botones();
     selTextura(numeroElemento);
   }
+     public void levelCreador(){
+
+    }
   public void selTextura(int elementoActual) {
     if (elementoActual==0) {
       elemento=loadImage("/data/Images/Piso/4.png");
@@ -34,6 +44,10 @@ class Creador extends Level {
       nombre="CajaD";
     }
     if (elementoActual==5) {
+      elemento=loadImage("/data/Images/Jugador/"+ J +"/J"+ J +"-right.png");
+      nombre="Jugador";
+    }
+    if (elementoActual==6) {
       numeroElemento=0;
     }
     if (elementoActual==-1) {

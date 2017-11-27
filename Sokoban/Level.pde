@@ -2,13 +2,14 @@ class Level{
  
    protected int alto;
    protected int ancho;
-   private int transAlto;
-   private int transAncho;
+   protected int transAlto;
+   protected int transAncho;
    protected PImage caja;
    protected PImage diamante;
    protected PImage pared;
    protected PImage piso;
    protected Table table;
+   protected Table datatTable;
 
    public void level(){
      caja = loadImage("/data/Images/Caja/Brillante/1.png");

@@ -9,6 +9,7 @@ Ventana extra = new Extra();
 Creador creador = new Creador();
 
 Table dataTable;
+Table datacTable;
 int lvl = 1;
 int piso = 4;
 int pared = 2;
