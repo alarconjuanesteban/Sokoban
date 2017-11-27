@@ -6,9 +6,10 @@ Ventana lvls = new lvls();
 Ventana opciones = new Opciones();
 Ventana vcreador = new Vcreador();
 Ventana extra = new Extra();
+Creador creador = new Creador();
 
 Table dataTable;
-int lvl = 2;
+int lvl = 1;
 int piso = 4;
 int pared = 2;
 int caja = 1;
@@ -20,7 +21,8 @@ char ventana_actual = 'i';
 int X, Y;
 
 void setup(){
-  size(700,700);
+  //size(700,700);
+ fullScreen();
   prueba.level(lvl);
   jugador.xyJugador(); 
 }
@@ -53,6 +55,10 @@ void draw(){
     break;
     case 'e':
       extra.drawVentana();
+    break;
+        case 't':
+      background(0);
+      creador.drawCreador();
     break;
   }
 }
