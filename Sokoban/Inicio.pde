@@ -9,7 +9,7 @@ class Inicio extends Ventana {
    public void drawV(){
      letrero = loadImage("/data/Images/Sokoban/sokoban.png");
      letrero.resize(500, 420);
-     image(letrero, 100 , height/8);
+     image(letrero, width/2-250 , height/8);
      pushStyle();
        Pixel = loadFont("PressStart2P-20.vlw");
        textFont(Pixel);
@@ -66,7 +66,7 @@ class Inicio extends Ventana {
        ventana_actual = 'c';  
      }
       
-     if (X > 100 && X < 500 && 
+     if (X > width/2-250 && X < width/2+250 && 
          Y > height/8 && Y < 270){
        e++;
        if(e==0)

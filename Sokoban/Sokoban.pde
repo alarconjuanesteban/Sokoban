@@ -22,8 +22,7 @@ char ventana_actual = 'i';
 int X, Y;
 
 void setup(){
-  //size(700,700);
- fullScreen();
+  fullScreen();
   prueba.level(lvl);
   jugador.xyJugador();
 }
@@ -60,7 +59,7 @@ void draw(){
     break;
         case 't':
       background(0);
-      creador.drawCreador();
+      creador.draw();
     break;
   }
 }
@@ -105,6 +104,8 @@ void draw(){
   public void mousePressed(){
     X = mouseX;
     Y = mouseY;
+    println(X);
+    println(Y);
   }
 
 
