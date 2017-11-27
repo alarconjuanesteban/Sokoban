@@ -24,7 +24,7 @@ void setup(){
   //size(700,700);
  fullScreen();
   prueba.level(lvl);
-  jugador.xyJugador(); 
+  jugador.xyJugador();
 }
 
 void draw(){
@@ -45,6 +45,7 @@ void draw(){
       background(72,47,23);
       prueba.escenario(pared, piso);
       prueba.elementos(caja, diamante);
+      prueba.completo();
       jugador.draw(lvl);
     break;
     case 'o':
@@ -63,50 +64,50 @@ void draw(){
   }
 }
 
-void colision(int direccionX, int direccionY){
-  int xJugador;
-  int yJugador;
-  xJugador = jugador.getxJugador();  
-  yJugador = jugador.getyJugador();
-  
-  xJugador  += direccionX;
-  yJugador  += direccionY;
-  
-  numero_elemento = prueba.conocer_elemento(yJugador,xJugador);
-}
-
-void moverCaja(int direccionX, int direccionY, int caso){
-  int xJugador;
-  int yJugador;
-  xJugador = jugador.getxJugador();  
-  yJugador = jugador.getyJugador();
-  
-  xJugador  += direccionX;
-  yJugador  += direccionY;
-  
-  switch(caso){
-    case 1:
-      prueba.movCajaArriba(xJugador, yJugador);
-    break;
-    case 2:
-      prueba.movCajaAbajo(xJugador, yJugador);
-    break;
-    case 3:
-      prueba.movCajaDerecha(xJugador, yJugador);
-    break;
-    case 4:
-      prueba.movCajaIzquierda(xJugador, yJugador);
-    break;
+  void colision(int direccionX, int direccionY){
+    int xJugador;
+    int yJugador;
+    xJugador = jugador.getxJugador();  
+    yJugador = jugador.getyJugador();
+    
+    xJugador  += direccionX;
+    yJugador  += direccionY;
+    
+    numero_elemento = prueba.conocer_elemento(yJugador,xJugador);
   }
-}
-  public void mousePressed() {
+
+  void moverCaja(int direccionX, int direccionY, int caso){
+    int xJugador;
+    int yJugador;
+    xJugador = jugador.getxJugador();  
+    yJugador = jugador.getyJugador();
+    
+    xJugador  += direccionX;
+    yJugador  += direccionY;
+    
+    switch(caso){
+      case 1:
+        prueba.movCajaArriba(xJugador, yJugador);
+      break;
+      case 2:
+        prueba.movCajaAbajo(xJugador, yJugador);
+      break;
+      case 3:
+        prueba.movCajaDerecha(xJugador, yJugador);
+      break;
+      case 4:
+        prueba.movCajaIzquierda(xJugador, yJugador);
+      break;
+    }
+  }
+  
+  public void mousePressed(){
     X = mouseX;
     Y = mouseY;
-
   }
 
 
-  void keyPressed() {
+  void keyPressed(){
     if ((key == CODED && keyCode == UP) || (key == 'w') || (key == 'W'))
       mov = 1;
     if ((key == CODED && keyCode == DOWN) || (key == 's') || (key == 'S'))
@@ -115,17 +116,22 @@ void moverCaja(int direccionX, int direccionY, int caso){
       mov = 3;
     if ((key == CODED && keyCode == LEFT) || (key == 'a') || (key == 'A'))
       mov = 4;
-  
-  
-  if (ventana_actual == 'j'){
-   if ((key == 'P') || (key == 'p')){
-      ventana_actual = 'l';
-  }
-}}
 
-   public int getxMouse(){
+    if (ventana_actual == 'j'){
+      if ((key == 'P') || (key == 'p')){
+        ventana_actual = 'l';
+      }
+    }
+    
+    if ((key == 'R') || (key == 'r')){
+      prueba.reset();
+      jugador.reset();
+    }
+  }
+
+  public int getxMouse(){
     return X;
   }
-   public int getyMouse(){
+  public int getyMouse(){
     return Y;
   }
